@@ -8,10 +8,10 @@ function contarVocales(texto) {
   if( typeof texto !== 'string' ){
     t = -1;
   }else {
-    const arrayTexto = texto.toUpperCase().split('');
-    for (let i = 0; i < arrayTexto.length; i++) {
-      if (vocales.includes(arrayTexto[i])) {
-        t++
+    const textoArray = texto.toUpperCase().split("");
+    for (let i = 0; i < textoArray.length; i++) {
+      if (vocales.includes(textoArray[i])) {
+        t++;
       }
     }
   }
@@ -22,16 +22,48 @@ function contarVocales(texto) {
 Crear un repo en github y subir todo el proyecto. Se ignorará la carpeta node_modules (para ellos está creado el archivo .gitignore en este proyecto) Esta función devolverá un string con la url del repo.
 */
 function urlRepo() {
-  return ""
+  return "https://github.com/gonzalolamas/Node-EducacionIT-tp1.git";
 }
 
 /* 
 Crear una función arrow, que devuelva una clase en ES6 que contendrá dos métodos llamados contadorPalabras y hayNumeros. La clase recibirá un texto que se guardará en una propiedad llamada texto. contadorPalabras retornará la cantidad de palabras encontradas en la propiedad texto y hayNumeros devolverá true en caso de que encuentre un número en dicho texto, caso contrario retorna false. En ambos métodos, si el texto no es válido, se devolverá -1
 Crear un propiedad estática contadorInstancias que me indique cuantas instancias hay de esa clase.
 */
-const crearClase = () => {
-  return
-}
+const crearClase = () =>
+  class Texto {
+    static contadorInstancias;
+    constructor(texto) {
+      this.texto = texto;
+      !Texto.contadorInstancias
+        ? (Texto.contadorInstancias = 1)
+        : Texto.contadorInstancias++;
+    }
+    contadorPalabras(){
+      if (typeof this.texto !== 'string'){
+        return -1
+      } else {
+        let palabras = this.texto.split(' ')
+        return (this.texto.trim() !=='') ? palabras.length : 0
+      } 
+    }
+
+    hayNumeros(){
+      let textExisting = false
+      if (typeof this.texto !== 'string'){
+        return -1
+      } else {
+        let letters = this.texto.trim().split('')
+        for(const letter of letters){
+          if(isNaN(parseInt(letter)) ) {
+            textExisting = false
+          }else {
+            textExisting = true
+          }
+        }
+      }
+      return textExisting
+    }
+  };
 
 module.exports = {
   contarVocales,
