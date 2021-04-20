@@ -1,0 +1,29 @@
+{
+    "contenidoStr": "{\"type\":\"module\",\"name\":\"servidoresnode\",\"version\":\"1.0.0\",\"description\":\"servidor realizado para tarea de fizzmod\",\"main\":\"server.js\",\"scripts\":{\"test\":\"echo \\\"Error: no test specified\\\" && exit 1\",\"start\":\"nodemon server.js\"},\"keywords\":[\"node\",\"express\",\"servidores\",\"glitch\",\"modulos\"],\"author\":\"Gonzalo Lamas\",\"license\":\"ISC\",\"dependencies\":{\"express\":\"^4.17.1\",\"fs\":\"0.0.1-security\",\"nodemon\":\"^2.0.7\"}}",
+    "contenidoObj": {
+        "type": "module",
+        "name": "servidoresnode",
+        "version": "1.0.0",
+        "description": "servidor realizado para tarea de fizzmod",
+        "main": "server.js",
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "start": "nodemon server.js"
+        },
+        "keywords": [
+            "node",
+            "express",
+            "servidores",
+            "glitch",
+            "modulos"
+        ],
+        "author": "Gonzalo Lamas",
+        "license": "ISC",
+        "dependencies": {
+            "express": "^4.17.1",
+            "fs": "0.0.1-security",
+            "nodemon": "^2.0.7"
+        }
+    },
+    "size": 540
+}
